@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS users (
+  id SERIAL PRIMARY KEY,
+  full_name TEXT NOT NULL,
+  email TEXT UNIQUE NOT NULL,
+  password_hash TEXT NOT NULL,
+  balance INTEGER NOT NULL DEFAULT 1000,
+  email_verified BOOLEAN DEFAULT false,
+  created_at TIMESTAMP WITHOUT TIME ZONE DEFAULT NOW()
+);
